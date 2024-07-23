@@ -37,15 +37,9 @@ test("Verify multiple records returned against stored static response", async ({
     expect(responseBody.data.last_name).toBe('Bluth')
     expect(responseBody.data.avatar).toBe('https://reqres.in/img/faces/1-image.jpg')
 
-
-
-
-
-
-
-
   })
-
+  
+  //3)
 
 
 
