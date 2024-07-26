@@ -11,5 +11,6 @@ test.describe("CNB API verification", () => {
         expect(response.status()).toBe(200)
         expect(responseBody).toEqual(exrates)
         //console.log(responseBody)
+        
     })
 })
