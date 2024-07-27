@@ -1,6 +1,7 @@
 import { expect } from "playwright/test"
 import CommonActions from "../utils/CommonActions"
 
+
 export default class LoginPage{
     constructor(page){
         this.actions = new CommonActions(page)
@@ -15,6 +16,15 @@ export default class LoginPage{
         await this.actions.fill(this.usernameSelector  , username)
         await this.actions.fill('#password' , password)
         await this.actions.click('button[type="submit"]')
+    }
+
+    async getErrorMessage(){
+        return await this.actions.getText('#flash')
+    }
+
+    async assertErrorMessage(exppectedMessage){
+        const actualMessage = await this.getErrorMessage()
+        expect(actualMessage).toContain(exppectedMessage)
     }
 
     

@@ -17,10 +17,11 @@ export default class CommonActions {
     }
 
     async getText(selector){
-        return await this.page.textContext(selector)
+        return await this.page.textContent(selector)
     }
 
-    async isChecked(selector){
-        await this.page.isChecked(selector)
+    async isChecked(selector) {
+        const element = await this.page.$(selector);
+        return element ? await element.isChecked() : undefined;
     }
 }
