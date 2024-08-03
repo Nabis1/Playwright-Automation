@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import users from "../test-data/usersResponse.json"
+import users from "../API_test-data/usersResponse.json"
 import { request } from "http";
 
 test.describe("API Verification examples", () => {

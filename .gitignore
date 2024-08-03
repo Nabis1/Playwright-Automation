@@ -3,3 +3,10 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/tests-examples/
+
+/api_example/package.json
+/api_example/package-lock.json
+/pom_example/package.json
+/pom_example/package-lock.json
+

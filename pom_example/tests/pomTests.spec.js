@@ -48,7 +48,7 @@ test.describe('Checkbox verification', () => {
         await page.close()
     })
 
-    test.only('Check and uncheck checkboxes', async () => {
+    test('Check and uncheck checkboxes', async () => {
         await pm.checkboxesPage.navigate()
         await pm.checkboxesPage.checkCheckbox(1)
         await pm.checkboxesPage.assertCheckbox(1, true)

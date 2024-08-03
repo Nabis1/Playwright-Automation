@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import exrates from "../test-data/exratesDailyCNB.json";
+import exrates from "../API_test-data/exratesDailyCNB.json";
 
 test.describe("CNB API verification", () => {
 
@@ -11,6 +11,6 @@ test.describe("CNB API verification", () => {
         expect(response.status()).toBe(200)
         expect(responseBody).toEqual(exrates)
         //console.log(responseBody)
-        
+
     })
 })
