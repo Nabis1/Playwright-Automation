@@ -8,9 +8,7 @@ export default class UsersAPI {
 
   async getUserById(userId) {
     const response = await this.request.get(`${this.baseURL}/users/${userId}`)
-    if (!response.ok()) {
-      throw new Error(`Failed to fetch user: ${response.status()}`)
-    }
+    
     return response.json()
   }
 
@@ -18,6 +16,13 @@ export default class UsersAPI {
     const response = await this.request.get(`${this.baseURL}/users?page=1`)
     return response.json()
 
+  }
+
+  async createUser(userData) {
+    const response = await this.request.post(`${this.baseURL}/users`, {
+      data: userData,
+    });
+    return response.json()
   }
 
   async assertUser(userId) {
