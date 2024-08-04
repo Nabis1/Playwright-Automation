@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test'
 import UsersAPI from '../pages/UsersAPI'
 import usersResponse from '../API_test-data/usersResponse.json'
 import { ClientRequest, request } from 'http'
+import { resourceUsage } from 'process'
 
 test.describe('API Verification with POM', () => {
   let usersAPI
@@ -30,6 +31,19 @@ test.describe('API Verification with POM', () => {
     expect(responseData).toHaveProperty('job', newUser.job)
     expect(responseData).toHaveProperty('id')
     expect(responseData).toHaveProperty('createdAt')
+
+  })
+
+  test(' Verify DELETE request', async ({request}) =>{
+    usersAPI = new UsersAPI(request)
+    const userIdToDelete = 1
+
+    await usersAPI.assertUser(userIdToDelete)
+
+    const statusCode = await usersAPI.deleteUser(userIdToDelete)
+    expect(statusCode).toBe(204)
+
+
   })
 
   

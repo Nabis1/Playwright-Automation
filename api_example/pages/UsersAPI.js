@@ -25,6 +25,11 @@ export default class UsersAPI {
     return response.json()
   }
 
+  async deleteUser(userId){
+    const response = await this.request.delete(`${this.baseURL}/users/${userId}`)
+    return response.status()
+  }
+
   async assertUser(userId) {
     const response = await this.getUserById(userId)
     const userData = response.data 
