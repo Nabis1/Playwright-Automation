@@ -3,7 +3,8 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-/tests-examples/
+
+
 
 /api_example/package.json
 /api_example/package-lock.json
@@ -11,3 +12,6 @@ node_modules/
 /pom_example/package-lock.json
 
 
+package-lock.json
+package.json
+tests-examples/
