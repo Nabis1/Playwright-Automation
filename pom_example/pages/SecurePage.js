@@ -3,6 +3,7 @@ import CommonActions from "../utils/CommonActions";
 
 export default class SecurePage{
     constructor(page){
+        this.page = page
         this.actions = new CommonActions(page)
     }
 
@@ -10,9 +11,10 @@ export default class SecurePage{
         return await this.actions.getText('#flash')
     }
 
-    async assertLoggedInMessage(passedMessage){
-        const message = await this.getMessage()
-        expect(message).toContain(passedMessage)
+    async assertLoggedInMessage(expectedMessage){
+        const message = await this.actions.getText('#flash');
+        expect(message).toContain(expectedMessage)
     }
+    
 
 }

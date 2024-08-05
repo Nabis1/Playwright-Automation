@@ -24,4 +24,5 @@ export default class CommonActions {
         const element = await this.page.$(selector);
         return element ? await element.isChecked() : undefined;
     }
+   
 }

@@ -1,13 +1,15 @@
 import { expect } from "@playwright/test";
 import CommonActions from '../utils/CommonActions.js'
 
+let checkboxPage = 'https://the-internet.herokuapp.com/checkboxes'
+
 export default class CheckboxesPage {
     constructor(page){
         this.actions = new CommonActions(page)
     }
 
     async navigate(){
-        await this.actions.navigate('https://the-internet.herokuapp.com/checkboxes')
+        await this.actions.navigate(checkboxPage)
     }
 
     async checkCheckbox(index){
