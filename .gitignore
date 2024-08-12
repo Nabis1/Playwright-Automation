@@ -12,6 +12,4 @@ node_modules/
 /pom_example/package-lock.json
 
 
-package-lock.json
-package.json
-tests-examples/
+
