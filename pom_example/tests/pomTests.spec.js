@@ -23,7 +23,7 @@ test.describe('Login Tests', () => {
         await page.close()
     })
 
-    test('Login with valid credentials', async ({ page }) => {
+    test('Login with valid credentials', async ({  }) => {
        
        
         await pm.loginPage.navigate()
