@@ -45,7 +45,7 @@ test.describe('Try to add product from e-shop to shopping cart', () => {
 
          await page.click('span.s-advisor__text:text("Stoly")')
 
-         await clickProductLink(page, '/p/livarno-home-zahradni-stul-sevilla-140-x-80-cm/p100372236')
+         await clickProductLink(page, 'p/livarno-home-hlinikovy-zahradni-stul-toronto-antracitova/p100371198')
 
          await page.click('#addToCart')
 
